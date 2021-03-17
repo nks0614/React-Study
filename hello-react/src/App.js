@@ -1,15 +1,13 @@
-import logo from './Danny.png';
-import './App.css';
+import React from 'react';
+import './App.css'
+import MyComponent from './MyComponent'
 
 function App() {
+  const name = 'gang'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          안녕하세요 남규석입니다
-        </p>
-      </header>
+    <div className='react'>
+       <MyComponent></MyComponent>
     </div>
   );
 }
