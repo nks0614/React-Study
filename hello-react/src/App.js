@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css'
 import MyComponent from './MyComponent'
+import Counter from './Counter'
+import Say from './Say'
 
-function App() {
-  const name = 'gang'
-
-  return (
-    <div className='react'>
-       <MyComponent></MyComponent>
-    </div>
-  );
+const App = () => {
+  return <Say></Say>
 }
 
 export default App;
