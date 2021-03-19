@@ -1,0 +1,24 @@
+.TodoTemplate {
+    width : 512px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-title {
+    background-color: black;
+    color: white;
+    height: 4rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background: wheat;
+    padding: 1rem;
+}
+
+.checkBox {
+    margin-right: 1rem;
+}
