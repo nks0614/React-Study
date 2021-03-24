@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css'
-import MyComponent from './MyComponent'
-import Counter from './Counter'
-import Say from './Say'
+import EventExample from './EventExample'
 
 const App = () => {
-  return <Say></Say>
+  return <EventExample/>
 }
 
 export default App;
