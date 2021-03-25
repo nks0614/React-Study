@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css'
-import EventExample from './EventExample'
+import ScrollBox from './ScrollBox'
 
-const App = () => {
-  return <EventExample/>
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <ScrollBox ref={(ref) => this.scrollBox=ref}/>
+                <button onClick={() => this.scrollBox.scrollToBottom()}>밑으로</button>
+            </div>
+            
+        )
+    }
 }
 
 export default App;
