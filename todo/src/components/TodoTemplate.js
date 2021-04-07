@@ -1,16 +1,13 @@
-import React from 'react'
-import './TodoTemplate.css'
+import React from 'react';
+import './TodoTemplate.css';
 
-const TodoTemplate = ( { children } ) => {
+const TodoTemplate = ({ children}) => {
     return (
         <div className='TodoTemplate'>
-            <h2>3학년 2반 10번 남규석</h2>
-            <div className='app-title'>일정 관리</div>
-            <div className='content'>
-                {children}
-            </div>
+            <div className='app-title'>일정관리</div>
+            <div className='content'>{children}</div>
         </div>
-    )
+    );
 }
 
-export default TodoTemplate
+export default TodoTemplate;

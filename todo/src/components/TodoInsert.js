@@ -1,39 +1,32 @@
-import React, {useState} from 'react'
+import React, {useState, useCallback} from 'react';
+import { MdAdd } from 'react-icons/md';
 
+const TodoInsert = ({onInsert}) => {
+    const [value, setValue] = useState('');
 
-const TodoInsert = () => {
-    const [todo, setTodo] = useState([])
-    const [inputText, setInputText] = useState('')
-    const [nextId, setNextId] = useState(1)
+    const onChange = useCallback( e => {
+        setValue(e.target.value);
+    }, []);
 
-    const onChange = (e) => {
-        setInputText(e.target.value)
-    }
-
-    const onClick = () => {
-        const nextTodo = todo.concat({
-            id : nextId,
-            text : inputText
-        })
-        setNextId(nextId + 1)
-        setTodo(nextTodo)
-        setInputText('')
-    }
-
-    const onRemove = (id) => {
-        const newTodo = todo.filter((todo) => todo.id !== id)
-        setTodo(newTodo)
-    }
-
-    const todoList = todo.map((todo) => <li key={todo.id} onDoubleClick={() => onRemove(todo.id)}>{todo.text}</li>)
+    const onSubmit = useCallback( e => {
+        onInsert(value);
+        setValue('');
+        e.preventDefault();
+    }, [onInsert, value],
+    );
 
     return (
-        <div>
-            <input value={inputText} onChange={onChange}/>
-            <button onClick={onClick}>추가</button>
-            <ul>{todoList}</ul>
-        </div>
-    )
-}
+        <form className="TodoInsert" onSubmit={onSubmit}>
+            <input 
+                placeholder="할 일을 입력하세요"
+                value={value}
+                onChange={onChange} 
+            /> 
+            <button type="submit">
+                <MdAdd />
+            </button>
+        </form>
+    );
+};
 
-export default TodoInsert
+export default TodoInsert;

@@ -1,11 +1,14 @@
 .TodoTemplate {
-    width : 512px;
+    width: 512px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .app-title {
-    background-color: black;
+    background: rgb(94, 88, 92);
     color: white;
     height: 4rem;
     font-size: 1.5rem;
@@ -14,11 +17,7 @@
     justify-content: center;
 }
 
-.content {
-    border: 1px solid gray;
-    padding: 1rem;
-}
-
-.checkBox {
-    margin-right: 1rem;
+.content{
+    background: rgb(218, 218, 218);
+    color: white;
 }
