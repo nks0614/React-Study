@@ -2,17 +2,11 @@ import React from 'react'
 import qs from 'qs'
 
 const About = ({location}) => {
-    const query = qs.parse(location.search, {
-        ignoreQueryPrefix : true
-    })
-
-    const showDetail = query.detail === 'true'
-
-    return (
+    return(
         <div>
             <h1>소개</h1>
-            <p>소개소개소개소개</p>
-            {showDetail && <p>detail 값이 true</p>}
+            <p>분야 : Android</p>
+            <p>Android 개발을 주로 공부하고 있고, Java, Kotiln, Javascript 언어들을 활용할 수 있습니다.</p>
         </div>
     )
 }
